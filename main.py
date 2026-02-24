@@ -8,8 +8,11 @@ import matplotlib.pyplot as plt
 #looking for datasets on Kaggle 
 dataset=pd.read_csv("globalPlasticProduction.csv")
 
-#epa 
+#print head values 
 print(dataset.head())
+print(dataset.dtypes())
+print(dataset.shape())
+
 
 
 #question -- how has the annual growth rate changed of global plastic pollution changed overtime?

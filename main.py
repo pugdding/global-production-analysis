@@ -10,8 +10,8 @@ dataset=pd.read_csv("globalPlasticProduction.csv")
 
 #print head values 
 print(dataset.head())
-print(dataset.dtypes())
-print(dataset.shape())
+print(dataset.dtypes)
+print(dataset.shape)
 
 
 

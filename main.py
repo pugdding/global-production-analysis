@@ -4,4 +4,6 @@ import numpy as np
 
 
 #looking for datasets on Kaggle 
-dataset=pd.open_csv("globalPlasticProduction")
+dataset=pd.read_csv("globalPlasticProduction.csv")
+
+

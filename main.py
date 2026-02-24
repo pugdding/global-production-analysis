@@ -1,35 +1,30 @@
-#import libraries 
+#Import Libraries
 import pandas as pd 
 import numpy as np
 import seaborn as sb
 import matplotlib.pyplot as plt 
 
-
-#looking for datasets on Kaggle 
+#Looking For Datasets On Kaggle
 dataset=pd.read_csv("globalPlasticProduction.csv")
 
-#print head values 
+#Print Head Values 
 print(dataset.head())
 print(dataset.dtypes)
 print(dataset.shape)
 
+#Question -- how has the annual growth rate changed of global plastic pollution changed overtime?
 
-
-#question -- how has the annual growth rate changed of global plastic pollution changed overtime?
-
-#analysis 
+#Analysis
 
 #How To Calculate The Current Growth Rate 
 annualGrowthRate=(dataset["Plastic"].pct_change() * 100)
 dataset["annualGrowthRate"]=annualGrowthRate
 
-
-
 #Graph
 plt.figure()
 sb.lineplot(data=dataset,x="Year",y="annualGrowthRate")
 
-#custom the graph
+#Custom the Graph
 plt.title("Annual Growh Rate Of Global Plastic Pollution")
 plt.xlabel("Year")
 plt.ylabel("Growth Rate By %")

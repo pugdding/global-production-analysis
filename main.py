@@ -6,4 +6,7 @@ import numpy as np
 #looking for datasets on Kaggle 
 dataset=pd.read_csv("globalPlasticProduction.csv")
 
+#epa 
+print(dataset.head())
+
 

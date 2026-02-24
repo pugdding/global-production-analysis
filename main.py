@@ -2,6 +2,7 @@
 import pandas as pd 
 import numpy as np
 import seaborn as sb
+import matplotlib.pyplot as plt 
 
 
 #looking for datasets on Kaggle 
@@ -10,5 +11,26 @@ dataset=pd.read_csv("globalPlasticProduction.csv")
 #epa 
 print(dataset.head())
 
-#analysis
+
+#question -- how has the annual growth rate changed of global plastic pollution changed overtime?
+
+#analysis 
+
+#How To Calculate The Current Growth Rate 
+annualGrowthRate=(dataset["Plastic"].pct_change() * 100)
+dataset["annualGrowthRate"]=annualGrowthRate
+
+
+
+#Graph
+sb.lineplot(data=dataset,x="Year",y="Plastic")
+
+#custom the graph
+plt.title("Annual Growh Rate Of Global Plastic Pollution")
+plt.xlabel("Year")
+plt.ylabel("Growth Rate By %")
+
+plt.show()
+
+
 

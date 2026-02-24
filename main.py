@@ -26,6 +26,7 @@ dataset["annualGrowthRate"]=annualGrowthRate
 
 
 #Graph
+plt.figure()
 sb.lineplot(data=dataset,x="Year",y="annualGrowthRate")
 
 #custom the graph
@@ -33,7 +34,15 @@ plt.title("Annual Growh Rate Of Global Plastic Pollution")
 plt.xlabel("Year")
 plt.ylabel("Growth Rate By %")
 plt.locator_params(axis="y", nbins=20)
+
+#Create New Plot
+plt.figure()
+sb.lineplot(data=dataset, x="Year", y="Plastic")
+plt.title("Global Plastic Pollution Per Year")
+plt.xlabel("Year")
+plt.ylabel("Blobal Plastic Pollution Per Million Tons")
 plt.show()
+
 
 
 

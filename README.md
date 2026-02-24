@@ -1,0 +1,1 @@
+Project was to introduce pandas and data visual tools. Used a publicly avaliable Kaggle set able to be found here https://www.kaggle.com/datasets/sohamgade/plastic-datasets/code (I only used one file but there are serveral avaliable)
